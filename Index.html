@@ -1,154 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zara - A Beautiful and Amazing Soul</title>
-    <style>
-        /* CSS for styling the website */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffcce0; /* soft pink background */
-            color: #333;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orita – A Beautiful Soul</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #ffe0f0, #fffdfd);
+      color: #444;
+      text-align: center;
+      overflow-x: hidden;
+    }
 
-        /* Floating flowers */
-        .flower {
-            position: fixed;
-            top: -50px;
-            font-size: 2rem;
-            animation: fall linear infinite;
-            opacity: 0.9;
-        }
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5em;
+      color: #d63384;
+    }
 
-        @keyframes fall {
-            0% {
-                transform: translateY(-50px) rotate(0deg);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(110vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
+    p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.6em;
+    }
 
-        header {
-            background: linear-gradient(to right, #ff6f61, #ffb88c);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            position: relative;
-            z-index: 2;
-        }
+    /* Photo Gallery */
+    .gallery {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      width: 100vw;
+      height: 80vh;
+      margin-top: 20px;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+    .gallery img {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      scroll-snap-align: center;
+    }
 
-        header p {
-            font-size: 1.2rem;
-            margin: 0.5rem 0;
-        }
+    /* Floating Flowers */
+    .flower {
+      position: absolute;
+      font-size: 24px;
+      animation: float 12s linear infinite;
+      opacity: 0.7;
+      pointer-events: none;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .description {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .description h2 {
-            color: #ff6f61;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .description p {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            z-index: 2;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive design */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            header p {
-                font-size: 1rem;
-            }
-
-            .description h2 {
-                font-size: 1.5rem;
-            }
-
-            .description p {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Meet Zara</h1>
-        <p>A Beautiful and Amazing Soul from India</p>
-    </header>
+  <h1>🌸 Orita 🌸</h1>
+  <p>
+    Orita is a bright and beautiful girl from Bangladesh.<br>
+    Pretty, smart, and funny — she lights up every room she walks into.<br>
+    Streetwise yet graceful, outgoing yet thoughtful,<br>
+    Orita reminds everyone that life is best lived with laughter and kindness.
+  </p>
 
-    <div class="container">
-        <div class="description">
-            <h2>About Zara</h2>
-            <p>Zara is a 19-year-old vibrant and inspiring young woman from India, currently pursuing her BBA in Finance in the beautiful city of Jaipur. Known for her grace and charm, Zara captivates everyone with her warm personality and radiant smile.</p>
-            <p>Her dedication to her studies in finance reflects her sharp intellect and ambition to make a mark in the world of business. Beyond academics, Zara is an amazing individual who brings positivity and creativity to everything she does, whether it's engaging in meaningful conversations or exploring the rich culture of Jaipur.</p>
-            <p>With her blend of beauty, intelligence, and kindness, Zara is truly a gem, inspiring those around her to dream big and live passionately.</p>
-        </div>
-    </div>
+  <!-- Horizontal Scroll Gallery -->
+  <div class="gallery">
+    <img src="orita0.jpg" alt="Orita 0">
+    <img src="orita1.jpg" alt="Orita 1">
+    <img src="orita2.jpg" alt="Orita 2">
+    <img src="orita3.jpg" alt="Orita 3">
+    <img src="orita4.jpg" alt="Orita 4">
+    <img src="orita5.jpg" alt="Orita 5">
+    <img src="orita6.jpg" alt="Orita 6">
+  </div>
 
-    <footer>
-        <p>&copy; 2025 | Created with ❤️ for Zara</p>
-    </footer>
-
-    <!-- Floating flowers + pandas (using emoji) -->
-    <script>
-        const flowers = ["🌸", "🌺", "🌼", "🌻", "🐼"];
-        for (let i = 0; i < 20; i++) {
-            let span = document.createElement("span");
-            span.className = "flower";
-            span.innerText = flowers[Math.floor(Math.random() * flowers.length)];
-            span.style.left = Math.random() * 100 + "vw";
-            span.style.animationDuration = 5 + Math.random() * 5 + "s";
-            span.style.fontSize = 1.5 + Math.random() * 2 + "rem";
-            document.body.appendChild(span);
-        }
-    </script>
+  <!-- Floating Flowers -->
+  <div class="flower" style="left:10%; animation-delay: 0s;">🌸</div>
+  <div class="flower" style="left:25%; animation-delay: 2s;">🌺</div>
+  <div class="flower" style="left:40%; animation-delay: 4s;">🌼</div>
+  <div class="flower" style="left:55%; animation-delay: 6s;">🌸</div>
+  <div class="flower" style="left:70%; animation-delay: 8s;">🌺</div>
+  <div class="flower" style="left:85%; animation-delay: 10s;">🌼</div>
 </body>
 </html>
