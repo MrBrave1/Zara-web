@@ -10,9 +10,30 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #ffcce0; /* soft pink background */
             color: #333;
             line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Floating flowers */
+        .flower {
+            position: fixed;
+            top: -50px;
+            font-size: 2rem;
+            animation: fall linear infinite;
+            opacity: 0.9;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-50px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
         }
 
         header {
@@ -20,6 +41,8 @@
             color: white;
             text-align: center;
             padding: 2rem 0;
+            position: relative;
+            z-index: 2;
         }
 
         header h1 {
@@ -36,6 +59,8 @@
             max-width: 800px;
             margin: 2rem auto;
             padding: 0 1rem;
+            position: relative;
+            z-index: 2;
         }
 
         .description {
@@ -65,6 +90,7 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            z-index: 2;
         }
 
         footer p {
@@ -107,9 +133,22 @@
         </div>
     </div>
 
-    
     <footer>
         <p>&copy; 2025 | Created with ❤️ for Zara</p>
     </footer>
+
+    <!-- Floating flowers + pandas (using emoji) -->
+    <script>
+        const flowers = ["🌸", "🌺", "🌼", "🌻", "🐼"];
+        for (let i = 0; i < 20; i++) {
+            let span = document.createElement("span");
+            span.className = "flower";
+            span.innerText = flowers[Math.floor(Math.random() * flowers.length)];
+            span.style.left = Math.random() * 100 + "vw";
+            span.style.animationDuration = 5 + Math.random() * 5 + "s";
+            span.style.fontSize = 1.5 + Math.random() * 2 + "rem";
+            document.body.appendChild(span);
+        }
+    </script>
 </body>
-  </html>
+</html>
